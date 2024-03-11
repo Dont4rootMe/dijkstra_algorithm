@@ -19,6 +19,6 @@ init_graph["7"]["6"] = 2
 
 graph = Graph(nodes, init_graph)
 
-observed, curr_path = dijkstra_algorithm(graph=graph, start_node="0")
-
-print_result(observed, curr_path, start_node="0", target_node="5")
+previous, curr_path, mapper = dijkstra_algorithm(graph=graph, start_node="0", return_distances=True)
+print_result(previous, curr_path, start_node="0", target_node="5")
+print(mapper)
